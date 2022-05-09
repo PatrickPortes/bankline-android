@@ -1,6 +1,10 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+
+    // Reference: https://developer.android.com/kotlin/parcelize
+    // Plugin para melhorar o envio de dados de uma tela para outra
+    id 'kotlin-parcelize'
 }
 
 android {
@@ -28,6 +32,11 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+
+    // Reference: https://developer.android.com/topic/libraries/view-binding
+    buildFeatures{
+        viewBinding true
     }
 }
 
